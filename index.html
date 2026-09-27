@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#192321">
+    <meta name="description" content="История длиной 7 месяцев: книга для Лизы.">
+    <title>История длиной 7 месяцев</title>
+    <link rel="preconnect" href="https://fonts.cdnfonts.com">
+    <link href="https://fonts.cdnfonts.com/css/minecraft-4" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main class="scene">
+        <div class="ambient ambient-left" aria-hidden="true"></div>
+        <div class="ambient ambient-right" aria-hidden="true"></div>
+
+        <section class="craft-screen" id="craftScreen" aria-labelledby="craftHeading">
+            <div class="craft-panel">
+                <p class="panel-label" id="craftHeading">Создание</p>
+                <div class="craft-layout">
+                    <div class="craft-grid" aria-label="Рецепт зачарованной книги">
+                        <span class="craft-slot"><i class="pixel-paper"></i></span>
+                        <span class="craft-slot"><i class="pixel-paper"></i></span>
+                        <span class="craft-slot"><i class="pixel-paper"></i></span>
+                        <span class="craft-slot"><i class="pixel-paper"></i></span>
+                        <span class="craft-slot"><i class="pixel-book"></i></span>
+                        <span class="craft-slot"><i class="pixel-paper"></i></span>
+                        <span class="craft-slot"><i class="pixel-paper"></i></span>
+                        <span class="craft-slot"><i class="pixel-paper"></i></span>
+                        <span class="craft-slot"><i class="pixel-paper"></i></span>
+                    </div>
+                    <span class="craft-arrow" aria-hidden="true">➜</span>
+                    <button class="result-slot" id="openBook" type="button"
+                        aria-label="Открыть зачарованную книгу: История длиной 7 месяцев, Удача 3">
+                        <span class="pixel-book enchanted" aria-hidden="true"></span>
+                        <span class="item-tooltip"><b>История длиной 7 месяцев</b><span>Удача 3</span></span>
+                    </button>
+                </div>
+                <div class="inventory-label">Инвентарь</div>
+                <div class="inventory-grid" aria-hidden="true">
+                    <i class="inventory-slot"></i><i class="inventory-slot"></i><i class="inventory-slot"></i>
+                    <i class="inventory-slot"></i><i class="inventory-slot"></i><i class="inventory-slot"></i>
+                    <i class="inventory-slot"></i><i class="inventory-slot"></i><i class="inventory-slot"></i>
+                    <i class="inventory-slot"></i><i class="inventory-slot"></i><i class="inventory-slot"></i>
+                    <i class="inventory-slot"></i><i class="inventory-slot"></i><i class="inventory-slot"></i>
+                    <i class="inventory-slot"></i><i class="inventory-slot"></i><i class="inventory-slot"></i>
+                    <i class="inventory-slot"></i><i class="inventory-slot"></i><i class="inventory-slot"></i>
+                    <i class="inventory-slot"></i><i class="inventory-slot"></i><i class="inventory-slot"></i>
+                    <i class="inventory-slot"></i><i class="inventory-slot"></i><i class="inventory-slot"></i>
+                </div>
+                <div class="hotbar-grid" aria-hidden="true">
+                    <i class="inventory-slot"></i><i class="inventory-slot"></i><i class="inventory-slot"></i>
+                    <i class="inventory-slot"></i><i class="inventory-slot"></i><i class="inventory-slot"></i>
+                    <i class="inventory-slot"></i><i class="inventory-slot"></i><i class="inventory-slot"></i>
+                </div>
+                <p class="craft-hint">КНИГА ГОТОВА</p>
+            </div>
+            <p class="edition-note">СОЗДАНО ДЛЯ ЛИЗЫ <span aria-hidden="true">✦</span></p>
+        </section>
+
+        <section class="story-screen is-hidden" id="storyScreen" aria-label="Книга нашей истории">
+            <header class="book-topline">
+                <span class="book-mark"><i class="mini-book" aria-hidden="true"></i> ЛИЗА + Я</span>
+                <span class="page-counter" id="pageCounter" aria-live="polite">ОБЛОЖКА</span>
+                <button class="sound-button" id="soundToggle" type="button" aria-label="Звук выключен"
+                    title="Звук перелистывания">♫ <span>ВЫКЛ</span></button>
+            </header>
+
+            <div class="book-spread" id="bookSpread">
+                <aside class="left-page" aria-hidden="true">
+                    <div class="left-page-top">НАША ИСТОРИЯ</div>
+                    <div class="pixel-heart">♥</div>
+                    <div class="left-page-line"></div>
+                    <p>7 МЕСЯЦЕВ<br>РЯДОМ</p>
+                    <div class="left-page-bottom"><span>✦</span><span>✦</span><span>✦</span></div>
+                </aside>
+                <article class="right-page" id="pageContent" aria-live="polite"></article>
+            </div>
+
+            <nav class="page-controls" aria-label="Листание книги">
+                <button class="turn-button" id="previousPage" type="button" aria-label="Предыдущая страница"
+                    title="Предыдущая страница">
+                    <span class="button-chevron" aria-hidden="true">◀</span><span class="button-label">НАЗАД</span>
+                </button>
+                <div class="page-dots" id="pageDots" aria-label="Номер страницы"></div>
+                <button class="turn-button" id="nextPage" type="button" aria-label="Следующая страница"
+                    title="Следующая страница">
+                    <span class="button-label">ДАЛЬШЕ</span><span class="button-chevron" aria-hidden="true">▶</span>
+                </button>
+            </nav>
+            <button class="close-book" id="closeBook" type="button" aria-label="Закрыть книгу"
+                title="Закрыть книгу">✕</button>
+        </section>
+    </main>
+</body>
+
+</html>
